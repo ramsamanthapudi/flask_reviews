@@ -118,8 +118,8 @@ def index():
                 #   return render_template("res.html", products_catalog=False)
                 del bigboxes[0:3]
                 j = len(bigboxes)
-                if j>10:
-                    j=10
+                if j>6:
+                    j=6
                 for i in range(0,j):
                     box = bigboxes[i]
                     try:
