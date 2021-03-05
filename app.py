@@ -14,7 +14,7 @@ def homePage():
     return render_template("index.html")
 
 def review_insert(url,pages,collection,reviews_list,product_details,Product_Version):
-    for i in range(1, pages):
+    for i in range(1, 11):
         reviews_links = url + '&page=' + str(i)
         reviews_linkurl = requests.get(reviews_links)
         reviews_linkurl.encoding = 'utf-8'
