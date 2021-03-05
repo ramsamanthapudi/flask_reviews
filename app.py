@@ -85,11 +85,11 @@ def reviews(search,product_details):
 
     else:
         collection = DB[collection_naamamu]
-        #if collection.find({'product': product_details}).count()>0:
-        for i in collection.find({"Product_id":product_details}):
-           reviews_list.append(i)
-        # else:
-        #     review_insert(url,pages,collection,reviews_list,product_details,Product_Version)
+        if collection.find({'product': product_details}).count()>0:
+            for i in collection.find({"Product_id":product_details}):
+                reviews_list.append(i)
+        else:
+            review_insert(url,pages,collection,reviews_list,product_details,Product_Version)
 
     return render_template('results.html',reviews=reviews_list)
 
