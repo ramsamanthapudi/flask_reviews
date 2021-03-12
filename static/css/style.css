@@ -17,17 +17,17 @@ body * {
 img {
   border-radius: 50%;
   height: 60px;
-  width: 600px;
+  width: 60px;
 }
 
 .table-users {
   border: 1px solid #327a81;
   border-radius: 10px;
   box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
-  max-width: calc(100%-2em);
+  max-width: calc(100% - 2em);
   margin: 1em auto;
   overflow: hidden;
-  width: 8000px;
+  width: 800px;
 }
 
 table {
@@ -57,7 +57,7 @@ table tr:nth-child(2n+1) {
   background-color: #edf7f8;
 }
 
-@media screen and (max-width: 7000px) {
+@media screen and (max-width: 700px) {
   table, tr, td {
     display: block;
   }
@@ -104,7 +104,7 @@ table tr:nth-child(2n+1) {
     display: none;
   }
 }
-@media screen and (max-width: 5000px) {
+@media screen and (max-width: 500px) {
   .header {
     background-color: transparent;
     color: white;
@@ -119,7 +119,7 @@ table tr:nth-child(2n+1) {
     border-color: #daeff1;
     height: 100px;
     margin: 0.5rem 0;
-    width: 1000px;
+    width: 100px;
   }
 
   td:first-child {
