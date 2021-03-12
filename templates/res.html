@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Review Page</title>
+  <title>Products Page</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
@@ -17,7 +17,7 @@
 <body>
 
   <div class="table-users">
-   <div class="header">Reviews</div>
+   <div class="header">Products</div>
 
    <table cellspacing="0">
       <tr>
@@ -25,7 +25,7 @@
          <th>Offers</th>
          <th>Highlights</th>
          <th>Description</th>
-         <th width="230">Product Description</th>
+         <th>Product Description</th>
       </tr>
 
     {% for product in product %}
@@ -38,7 +38,7 @@
           <td> <a href="{{url_for('reviews',search=product['search_string'],product_details=product['_id'])}}">Reviews</a> </td>
       </tr>
        {% endfor %}
-    
+
 
    </table>
 </div>
