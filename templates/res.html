@@ -28,13 +28,13 @@
          <th>Product Description</th>
       </tr>
 
-    {% for product in product %}
+    {% for i in product %}
       <tr>
-          <td>{{product['Product_Version']}}</td>
-         <td>{{product['Offers']}}</td>
-         <td>{{product['Highlights']}}</td>
-         <td>{{product['Description']}}</td>
-         <td>{{product['Product_Description']}} </td>
+          <td>{{i['Product_Version']}}</td>
+         <td>{{i['Offers']}}</td>
+         <td>{{i['Highlights']}}</td>
+         <td>{{i['Description']}}</td>
+         <td>{{i['Product_Description']}} </td>
           <td> <a href="{{url_for('reviews',search=product['search_string'],product_details=product['_id'])}}">Reviews</a> </td>
       </tr>
        {% endfor %}

@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../Python/Projects/Drowsy/.idea/Drowsy.iml" filepath="$PROJECT_DIR$/../../Python/Projects/Drowsy/.idea/Drowsy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Python/Projects/DrowsyDriverDetection-master/.idea/DrowsyDriverDetection-master.iml" filepath="$PROJECT_DIR$/../../Python/Projects/DrowsyDriverDetection-master/.idea/DrowsyDriverDetection-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Python/Projects/MachineLearningModelToGCP-master/MLForCloudDeployment_GCP/.idea/MLForCloudDeployment_GCP.iml" filepath="$PROJECT_DIR$/../../Python/Projects/MachineLearningModelToGCP-master/MLForCloudDeployment_GCP/.idea/MLForCloudDeployment_GCP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../DS Classes/sentiment_analysis_deploy/.idea/TwitterSentimentAnalysis.iml" filepath="$PROJECT_DIR$/../../DS Classes/sentiment_analysis_deploy/.idea/TwitterSentimentAnalysis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../classify/.idea/classify.iml" filepath="$PROJECT_DIR$/../classify/.idea/classify.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dogcat/.idea/dogcat.iml" filepath="$PROJECT_DIR$/../dogcat/.idea/dogcat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../forestCover/forestCover/code/forest_cover_Classification/.idea/forest_cover_Classification.iml" filepath="$PROJECT_DIR$/../forestCover/forestCover/code/forest_cover_Classification/.idea/forest_cover_Classification.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Python/Projects/Project1/iNews-master/.idea/iNews-master.iml" filepath="$PROJECT_DIR$/../../Python/Projects/Project1/iNews-master/.idea/iNews-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../iplscores/.idea/iplscores.iml" filepath="$PROJECT_DIR$/../iplscores/.idea/iplscores.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../nlpsample/.idea/nlpsample.iml" filepath="$PROJECT_DIR$/../nlpsample/.idea/nlpsample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../project_pro/.idea/project_pro.iml" filepath="$PROJECT_DIR$/../project_pro/.idea/project_pro.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/reviewFlask.iml" filepath="$PROJECT_DIR$/.idea/reviewFlask.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../testproject/.idea/testproject.iml" filepath="$PROJECT_DIR$/../testproject/.idea/testproject.iml" />
     </modules>
   </component>
 </project>

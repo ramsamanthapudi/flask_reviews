@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup as bs
 from urllib.request import urlopen
 import pymongo
 from bson.objectid import ObjectId
+import certifi
 
 app = Flask(__name__)
 
@@ -62,8 +63,7 @@ def review_insert(url,pages,collection,reviews_list,product_details,Product_Vers
 @app.route('/reviews/<search>/<product_details>/',methods=['GET'])
 @cross_origin()
 def reviews(search,product_details):
-    connectstring = pymongo.MongoClient(
-        'mongodb+srv://Ram:Qwerty123@clusterlearning.shxr2.mongodb.net/TrainingDB?retryWrites=true&w=majority')
+    connectstring = pymongo.MongoClient("mongodb+srv://Ram:Qwerty123@clusterlearning.shxr2.mongodb.net/TrainingDB?retryWrites=true&w=majority",tlsCAFile=certifi.where())
     DB = connectstring['TrainingDB']
     collection_naamamu=search+'Reviews'
 
@@ -102,14 +102,17 @@ def index():
     if request.method == 'POST':
         try:
             searchString = request.form['content'].replace(" ","")
-            connectstring= pymongo.MongoClient('mongodb+srv://Ram:Qwerty123@clusterlearning.shxr2.mongodb.net/TrainingDB?retryWrites=true&w=majority')
+            print('before MongoDB')
+            connectstring= pymongo.MongoClient('mongodb+srv://Ram:Qwerty123@clusterlearning.shxr2.mongodb.net/TrainingDB?retryWrites=true&w=majority',ssl=True,ssl_cert_reqs='CERT_NONE')
             DB=connectstring['TrainingDB']
-
+            print('after mongo')
             products_list = []
+            print('searchString ',searchString)
+            print('names ',DB.list_collection_names())
             if searchString not in DB.list_collection_names():
                 flipkart_url = "https://www.flipkart.com/search?q=" + searchString
                 uClient = urlopen(flipkart_url)
-                flipkartPage = uClient.read()
+                flipkartPage = uClient.read()  # html content of that page.
                 uClient.close()
                 flipkart_html = bs(flipkartPage, "html.parser")
                 #try:
@@ -120,6 +123,7 @@ def index():
                 #   return render_template("res.html", products_catalog=False)
                 del bigboxes[0:3]
                 j = len(bigboxes)
+                print(j)
                 if j>6:
                     j=6
                 for i in range(0,j):
@@ -179,6 +183,7 @@ def index():
                     collection.insert_one(product_details)
             else:
                 collection = DB[searchString]
+            print('in else')
             products=collection.find({'search_string':searchString})
             print(products.count())
             for i in products:
